@@ -45,8 +45,7 @@ void loop() {
     WiFi.begin(SSID, PASSWORD);
   }
 
-  // Non-blocking LED blink using millis()
-  unsigned long currentMillis = millis();
+  const uint32_t currentMillis = millis();
   if (currentMillis - previousMillis >= LEDInterval) {
     previousMillis = currentMillis;
     digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
