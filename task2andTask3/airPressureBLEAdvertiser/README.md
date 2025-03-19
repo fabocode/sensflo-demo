@@ -1,5 +1,7 @@
 # Air Pressure Sensor BLE Demo
 
+![IMG_0060](https://github.com/user-attachments/assets/344244fc-7ba0-43c9-b4ca-229408cd7f48)
+
 This demo project for the ESP32-S3 illustrates how to measure air pressure using two Adafruit MPRLS sensors (0–25 PSI) via I2C and stream the readings over Bluetooth Low Energy (BLE). In addition, the firmware demonstrates a counter that increments whenever both sensor readings rise above 10 PSI. If the real sensor hardware is not available, a fake sensor implementation simulates the pressure values.
 
 ## Driver Hardware Approach Notes
