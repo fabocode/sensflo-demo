@@ -9,7 +9,7 @@ This demo uses the Adafruit MPRLS sensor as the selected hardware to fit the tas
 - The only drawback this sensor has is that it can only work with one I2C Slave Address.
 - This requires that we use two different I2C buses, the ESP32-S3 has hardware capabilities to support this.
 
-## Steps to implement driver
+## Steps to Implement Sensor Driver
 1. Research for options that can be considered to fit the project requirements, this Air Pressure Sensor required to work at 25 PSI max
 2. Study the datasheet to understand its communication protocol (this can vary depending of the hardware selected), also check if the hardware selected can be managed by the microcontrollers hardware.
 3. Plan the hardware Connections
@@ -35,17 +35,6 @@ The project achieves the following:
   The ESP32-S3 functions as a BLE server advertising two characteristics:
   - One characteristic transmits the current sensor readings (in PSI).
   - A second characteristic transmits the counter value.
-
-## Features
-
-- **Hardware Selection and I2C Communication:**
-  Uses two MPRLS sensors (or simulated dummy sensors) on separate I2C buses.
-- **Pressure Unit Conversion:**  
-  Converts sensor readings from hPa to PSI.
-- **Threshold-Based Counter:**  
-  Increments a counter when both sensors report pressure above 10 PSI.
-- **BLE Server with Notifications:**  
-  Advertises sensor data and counter value via BLE, enabling remote monitoring using a BLE apps (e.g., nRF Connect for Android / iOS).
 
 ## Requirements
 
